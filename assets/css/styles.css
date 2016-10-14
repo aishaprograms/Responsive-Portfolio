@@ -1,0 +1,161 @@
+* {
+	box-sizing: border-box;
+}
+
+body{
+	 background: url(../images/background.png);
+
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	/*padding: 10px;*/
+	/*margin:15px;*/
+	color: #ff6666;
+}
+
+h1 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+p, label, input, textarea{
+	font-size: 18px;
+	/*padding: 10px;*/
+	color: #777;
+}
+
+input, textarea{
+	/*margin: 10px;*/
+}
+
+.container {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+header{
+	background: #fff;
+	height: 100%;
+	border-bottom: 2px solid #ccc;
+	/*margin-bottom: 15px;*/
+	overflow: auto;
+}
+
+
+.logo-container {
+/*	padding: 0px;
+	margin:0px;*/
+	background: #ff6666;
+	height: 90px;
+}
+
+.logo{
+/*	padding: 0px;
+	margin:0px;*/
+	color:#fff;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	line-height: 90px;
+}
+
+nav {
+	height: 90px;
+}
+
+nav a {
+	color: #777;
+	text-decoration: none;
+	/*margin-left: 10px;*/
+	display: inline-block;
+	border-left: 1px solid #efefef;
+	/*padding-left: 10px;*/
+	font-size: 18px;
+	line-height: 18px;
+}
+
+nav a:first-child {
+	border-left: 0 none;
+}
+
+
+nav a:hover{
+	color:#ff6666;
+}
+
+section{
+	background: #fff;
+	border: 1px #ccc solid;
+}
+
+aside{
+	background: #fff;
+	border: 1px #ccc solid;
+}
+
+
+.aisha_img {
+	max-height: 300px;
+	float: left;
+	display: block;
+	/*padding: 20px;*/
+}
+
+.social {
+	width: 64px;
+	/*padding: 10px;*/
+}
+
+footer {
+	background: #666;
+	border-top: 8px solid #ff6666;
+	font-size: 12px;
+	text-align: center;
+}
+
+footer p{
+	color: #fff;
+}
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
