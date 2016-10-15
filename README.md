@@ -5,7 +5,7 @@ At 980px, the main content is reduced in width by 10%, and the spacing between t
 At 768px, all elements are given a width of 100% except the header and its child elements/ classes of logo and nav.
 At 640px, all elements are given a width of 100% and appropriate margins are established. The header is made static.
 
-This site uses a sticky footer. It is commented throughout. The mobile version has stacked content to create longer pages. 
+This site is commented throughout. The mobile version has stacked content to create longer pages. 
 
 There is a CSS animation on the logo of all pages. It slides in, increases in size, then returns to normal.
 
