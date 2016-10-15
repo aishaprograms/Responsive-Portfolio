@@ -20,7 +20,7 @@ h1:after, h2:after, h3:after{
 }
 
 h1 {
-	font-size: 28px;
+	font-size: 24px;
 	font-weight: bold;
 }
 
@@ -37,6 +37,7 @@ p, label, input, textarea{
 
 input, textarea{
 	margin: 10px;
+	display: block;
 }
 
 .container {
@@ -66,7 +67,7 @@ header{
 	padding: 0px;
 	margin:0px;
 	color:#fff;
-	font-size: 30px;
+	font-size: 24px;
 	font-weight: bold;
 	text-decoration: none;
 	line-height: 90px;
@@ -120,8 +121,62 @@ aside h2{
 	padding: 20px;
 }
 
+.portfolio_item{
+	height: 200px;
+	position: relative;
+	overflow: hidden;
+}
+
+.portfolio_img{
+	z-index: 0;
+	opacity: 0.5;
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+.portfolio_img:hover{
+	opacity: 1.0;
+}
+
+.porfolio_caption{
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	padding: 0;
+	position: absolute;
+	top: 135px;
+	z-index: 1;
+	color: #fff;
+	line-height: 40px;
+	text-align: center;
+	background: #ff6666;
+	font-size: 14px;
+	max-width: 270px;
+}
+
+.submit_button {
+    background-color: #ff6666;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 10px;
+}
+
+.submit_button:hover{
+	background: #666;
+	font-style: italic;
+	border:1px #ff6666 solid;
+}
+
 .social {
-	width: 64px;
+	max-width: 64px;
 	padding: 10px;
 }
 
@@ -162,50 +217,99 @@ footer p{
     display: block;
 }
 
+/*Breakpoint at 980px which shrinks down the main content area 
+and reduces the space between the two floating blocks*/
+@media only screen and (max-width: 980px){
+	
+	.container{
+		width: 90%;
+	}
 
+	.main-content-gap
+	{
+		width: 0;
+	}
+
+	.aisha_img{
+		float: none;
+		margin: 0 auto;
+	}
+
+	.social{
+		width: 36px;
+		padding: 1px;
+	}
+
+	.portfolio_item{
+		width: 100%;
+	}
+
+	.portfolio_caption{
+		width: 50%;
+	}
+
+	nav a{
+		margin-left: 0;
+	}
+
+}
 
 @media only screen and (max-width: 768px) {
-    /* For mobile phones: */
+
     [class*="col-"] {
         width: 100%;
     }
 
-    header{
-    	background: transparent;
+    .nav-container, .logo-container{
+    	width: 40%;
     }
-	
-	.logo-container{
-		height: 70px;
-	}
 
-	.logo{
-		line-height: 70px;
-	}
-
-	.gap{
-		padding: 0px;
-	}
+    .header-gap{
+    	width: 20%;
+    }
 
 	nav{
 		background: #fff;
 		text-align: center;
-		height: 70px;
-	}
-
-	nav a{
-		margin-top: 11px;
-	}
-	
-	section{
-		text-align: center;
 	}
 
 	aside h2{
-		text-align: center;
+		text-align: left;
 	}
 
-	.aisha_img{
-		display: inline-block;
-		float: none;
+	.portfolio_item{
+		width: 50%;
 	}
+}
+
+@media only screen and (max-width: 640px){
+	header{
+		position: static;
+	}
+
+	header .container{
+		width: 100%;
+	}
+
+	.nav-container, .logo-container {
+        width: 100%;
+        height: 70px;
+    }
+
+    .logo{
+    	line-height: 70px;
+    }
+	
+	.header-gap{
+		display: none;
+	}
+
+	nav a {
+		margin-top: 11px;
+	}
+
+	.portfolio_item{
+		width: 100%;
+	}
+
 }
