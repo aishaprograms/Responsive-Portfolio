@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6{
 	padding: 15px;
 	color: #ff6666;
 }
-
+/*Border under h- tags*/
 h1:after, h2:after, h3:after{
 	display: block;
 	border-bottom: 1px #ccc solid;
@@ -40,6 +40,7 @@ input, textarea{
 	display: block;
 }
 
+/*Content fix in 960px at desktop size*/
 .container {
 	width: 100%;
 	max-width: 960px;
@@ -90,6 +91,7 @@ nav a {
 	line-height: 18px;
 }
 
+/*First nav link to not have pipe-like border separator*/
 nav a:first-child {
 	border-left: 0 none;
 }
@@ -140,6 +142,7 @@ aside h2{
 	opacity: 1.0;
 }
 
+/*Caption overlays image in portfolio items*/
 .porfolio_caption{
 	margin-left: auto;
 	margin-right: auto;
@@ -193,6 +196,7 @@ footer p{
 }
 
 /* For desktop: */
+/*Uses W3 Schools Responsive Grid Layout*/
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -211,10 +215,36 @@ footer p{
     padding: 15px;
 }
 
+/*Html formatted to row>col- style for layout*/
 .row::after {
     content: "";
     clear: both;
     display: block;
+}
+
+.logo{
+	animation-duration: 3s;
+	animation-name: slidein;
+}
+
+/*Css animation: Logo slides in, increases size, then returns to normal*/
+/*Adopted from MDN*/
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+  75% {
+  font-size: 300%;
+  margin-left: 25%;
+  width: 150%;
+}
 }
 
 /*Breakpoint at 980px which shrinks down the main content area 
@@ -230,6 +260,7 @@ and reduces the space between the two floating blocks*/
 		width: 0;
 	}
 
+/*Remove text wrap from profile image*/
 	.aisha_img{
 		float: none;
 		margin: 0 auto;
@@ -254,8 +285,8 @@ and reduces the space between the two floating blocks*/
 
 }
 
+/*All classes to have 100% width except the header parent and child classes*/
 @media only screen and (max-width: 768px) {
-
     [class*="col-"] {
         width: 100%;
     }
@@ -264,6 +295,7 @@ and reduces the space between the two floating blocks*/
     	width: 40%;
     }
 
+/*Modify space between logo and nav*/
     .header-gap{
     	width: 20%;
     }
@@ -282,6 +314,7 @@ and reduces the space between the two floating blocks*/
 	}
 }
 
+/*All classes to have 100% width and header is static*/
 @media only screen and (max-width: 640px){
 	header{
 		position: static;
@@ -299,7 +332,7 @@ and reduces the space between the two floating blocks*/
     .logo{
     	line-height: 70px;
     }
-	
+/*Remove gap between logo and nav*/
 	.header-gap{
 		display: none;
 	}
