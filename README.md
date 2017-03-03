@@ -1,5 +1,5 @@
 # Responsive-Portfolio
-UPDATE: This was my very first Github repo. For an updated portfolio, please follow https://github.com/aishaprograms/aishaprograms
+UPDATE: For an updated portfolio, please follow https://github.com/aishaprograms/aishaprograms
 
 This is a portfolio created by and about Aisha Ahmad using responsive design and media queries.
 This takes the Basic-Portfolio and optimizes it for mobile responsiveness. There are media query breakpoints at 980px, 768px, and 640px. 
